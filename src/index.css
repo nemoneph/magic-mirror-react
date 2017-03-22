@@ -1,0 +1,42 @@
+html {
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #000;
+  color:#fff;
+}
+
+
+.box {
+  padding-top:30px;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+
+.box .left-widget {
+    order: 1;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 0px;
+    min-height: auto;
+    width:300px;
+}
+
+
+
+.box .right-widget {
+    order: 1;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 0px;
+    min-height: auto;
+    width:300px;
+
+}
