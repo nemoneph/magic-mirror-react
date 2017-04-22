@@ -1,10 +1,15 @@
+DIY : Magic mirror with raspberry PI
+
+-> Raspberry PI
+-> TV Screen + Two way mirror
+-> React App for building widgets (wrapped in a docker container)
+
+
+
+
 
 NEWS API:
 COMMAND API:
-OBJECTIF API:
-CLOCK JS
-
-
 
 
 
@@ -21,10 +26,23 @@ http://remtsoy.com/experiments/weather_widget/
 https://dribbble.com/shots/1663525-Weather-Widget-freebie-HTML-CSS
 
 
-animated icon: https://codepen.io/joshbader/pen/EjXgqr
-https://codepen.io/code4food/pen/rLvggd
 
 demo weather embed: http://cezarywojtkowski.com/react-forecast/
 
 
 http://secouchermoinsbete.fr/feeds.atom
+
+
+API Trello for task list
+
+
+Timeline calendar https://codepen.io/NilsWe/pen/FemfK
+
+
+https://blog.daftcode.pl/react-calendar-with-google-calendar-as-cms-tutorial-5f5d81e425a9
+
+
+578ddc77c467f25da97090f3
+
+
+https://api.trello.com/1/lists/58f4a674c010ae6407db6699?fields=name&cards=open&card_fields=name&key=f9861f47c8dbc3ed7c87c98d57ab1d7a&token=a65c1642977da7a2d29a3ee3576dd257b26837f48aaece5ca4747211c4da9bc6

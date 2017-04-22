@@ -16,6 +16,8 @@ class Weather extends Component {
   //
   componentDidMount() {
     this.fetchData()
+    setInterval(this.fetchData.bind(this), 1000*3600); // 
+
   }
   fetchData() {
     const API_URL = 'https://api.darksky.net/forecast/7379dcda9fb6431804dabe88556c0a91/45.7435453,%204.8645229?lang=fr&units=si';
@@ -26,7 +28,6 @@ class Weather extends Component {
         currently: responseData.currently,
         daily: responseData.daily.data
       });
-      console.log(this.state);
     });
   }
 
@@ -45,33 +46,37 @@ class Weather extends Component {
   }
 
   getDay(idx) {
-    if (idx >= 7) {
+    /*if (idx >= 7) {
       idx = 1;
-    }
+    }*/
     let jours = new Array("dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi");
     let date = new Date();
+    let day = (date.getDay()+idx) % 7;
 
-    return jours[date.getDay()+idx];   // nom du jour
+
+    return jours[day];   // nom du jour
 
   }
   render() {
     let currently =  this.state.currently;
     let daily = this.state.daily;
-
-    console.log(daily);
+    var day = '';
     const dailyWeather = daily.map((daily, idx) => {
-      /*if (idx == 7 ) {
-        return(<span></span>);
-      }*/
-       return (<li className={daily.icon}>
-         <div className="inner">
-            <h5 className="week-day">{this.getDay(idx+1)}</h5>
-            <i className="climacon sun">
-            <WeatherIcon icon={daily.icon} />
-            </i><br /><br />
-            <p className="week-day-temperature">{ Math.round(daily.temperatureMax)}</p>
-         </div>
-      </li>)
+       if(idx != 0) {
+         day =  this.getDay(idx);
+      } else {
+        day = 'Aujourd\'hui';
+      }
+       return (<li key={daily.sunsetTime}  className={daily.icon}>
+             <div className="inner">
+                <h5 className="week-day">{day}</h5>
+                <i className="climacon sun">
+                <WeatherIcon icon={daily.icon} />
+                </i><br /><br />
+                <p className="week-day-temperature">{ Math.round(daily.temperatureMin)}° / { Math.round(daily.temperatureMax)}°</p>
+             </div>
+          </li>)
+
     });
 
     return (

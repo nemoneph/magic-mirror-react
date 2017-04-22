@@ -7,10 +7,31 @@ body {
   font-family: sans-serif;
   background-color: #000;
   color:#fff;
+  width: 1500px;
 }
 
+.wrapper-rotate {
+  position: relative;
+  left: -100%;
+  -webkit-transform: rotateZ(-90deg);
+  -webkit-transform-origin-x: 100%;
+  -webkit-transform-origin-y: 0%;
+  float: right;
+  height: 1500px;
 
-.box {
+}
+.wrapper-page {
+	min-height:174vh; /* 1 */
+	display:flex; /* 2 */
+	flex-direction:column; /* 3 */
+
+}
+
+.box-content {
+	flex-grow:1; /* 4 */
+}
+
+.box-content {
   padding-top:30px;
   display:flex;
   flex-flow: row wrap;
@@ -20,23 +41,64 @@ body {
 }
 
 
-.box .left-widget {
+.box-content .left-widget {
     order: 1;
     flex: 0 0 auto;
     align-self: stretch;
     min-width: 0px;
     min-height: auto;
-    width:300px;
+    width:690px;
+}
+
+.box-content .left-widget div:first-child {
+  float:left;
 }
 
 
 
-.box .right-widget {
+.box-content .right-widget {
     order: 1;
     flex: 0 0 auto;
     align-self: stretch;
     min-width: 0px;
     min-height: auto;
     width:300px;
+
+}
+
+footer {
+  height:270px;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+
+footer .left-footer {
+    order: 1;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 0px;
+    min-height: auto;
+    width:600px;
+}
+
+
+footer .center-footer {
+    order: 2;
+    flex: 0 0 auto;
+    align-self: stretch;
+    min-width: 0px;
+    min-height: auto;
+    width:450px;
+}
+
+.widget-title {
+  border-bottom: 1px solid white;
+  font-family: "Lato";
+  font-size: 1.6em;
+  margin: 0 auto;
+  width:400px;
+  display:block;
+  padding-bottom:20px;
 
 }

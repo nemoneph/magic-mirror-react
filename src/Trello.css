@@ -1,0 +1,17 @@
+i.fa-list {
+  font-size: 1.2em;
+  padding-right:10px;
+}
+
+
+.card-widget ul  {
+      list-style-type:none;
+}
+
+
+.card-widget ul  li {
+  padding: 5px 0; }
+
+.card-widget {
+  padding-right:30px;
+}
