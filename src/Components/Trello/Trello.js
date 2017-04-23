@@ -20,7 +20,7 @@ class Trello extends Component {
   fetchData() {
 
     // http://secouchermoinsbete.fr/feeds.atom
-    const API_URL = 'https://api.trello.com/1/lists/'+TRELLO_LIST_ID+'?fields=name&cards=open&card_fields=name&key=f9861f47c8dbc3ed7c87c98d57ab1d7a&token='+TRELLO_LIST_KEY;
+    const API_URL = 'https://api.trello.com/1/lists/'+TRELLO_LIST_ID+'?fields=name&cards=open&card_fields=name&key=f9861f47c8dbc3ed7c87c98d57ab1d7a&token='+TRELLO_LIST_KEY+'&v='+Date.now();
     fetch('https://cors.now.sh/'+ API_URL)
     .then((response) =>  response.json())
     .then((responseData) => {
