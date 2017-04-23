@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WeatherIcon from './WeatherIcon';
 import './Weather.css';
+import {WEATHER_KEY} from '../../config.js'
 
 class Weather extends Component {
 
@@ -16,11 +17,11 @@ class Weather extends Component {
   //
   componentDidMount() {
     this.fetchData()
-    setInterval(this.fetchData.bind(this), 1000*3600); // 
+    setInterval(this.fetchData.bind(this), 1000*3600); 
 
   }
   fetchData() {
-    const API_URL = 'https://api.darksky.net/forecast/7379dcda9fb6431804dabe88556c0a91/45.7435453,%204.8645229?lang=fr&units=si';
+    const API_URL = 'https://api.darksky.net/forecast/'+WEATHER_KEY+'/45.7435453,%204.8645229?lang=fr&units=si';
     fetch('https://cors-anywhere.herokuapp.com/'+ API_URL)
     .then((response) =>  response.json())
     .then((responseData) => {

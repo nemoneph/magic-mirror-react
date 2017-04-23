@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import AnalogClock, { Themes } from 'react-analog-clock';
-import Weather from './Weather'
-import Knowledge from './Knowledge'
-import Quote from './Quote'
-import Trello from './Trello'
+import Weather from './Components/Weather/Weather'
+import Knowledge from './Components/Knowledge/Knowledge'
+import Quote from './Components/Quote/Quote'
+import Trello from './Components/Trello/Trello'
 
 class App extends Component {
 

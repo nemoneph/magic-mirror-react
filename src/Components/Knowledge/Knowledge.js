@@ -14,12 +14,12 @@ class Knowledge extends Component {
   //
   componentDidMount() {
     this.fetchData()
-    setInterval(this.fetchData.bind(this), 1000*3600); // 3 minutes in milliseconds
+    setInterval(this.fetchData.bind(this), 1000*3600); 
 
   }
   fetchData() {
     // http://secouchermoinsbete.fr/feeds.atom
-    const API_URL = 'https://geekz0ne.fr/rss-bridge/?action=display&bridge=ScmbBridge&format=JsonFormat';
+    const API_URL = 'https://geekz0ne.fr/rss-bridge/?action=display&bridge=ScmbBridge&format=JsonFormat&v='+Date.now();
     fetch('https://cors.now.sh/'+ API_URL)
     .then((response) =>  response.json())
     .then((responseData) => {

@@ -15,7 +15,7 @@ class Quote extends Component {
   //
   componentDidMount() {
     this.fetchData()
-    setInterval(this.fetchData.bind(this), 1000*3600*24); // 3 minutes in milliseconds
+    setInterval(this.fetchData.bind(this), 1000*3600); // 3 minutes in milliseconds
 
   }
   fetchData() {

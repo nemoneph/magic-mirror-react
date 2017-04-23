@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Trello.css'
-
+import {TRELLO_LIST_KEY, TRELLO_LIST_ID} from '../../config.js'
 class Trello extends Component {
 
   constructor(props){
@@ -20,7 +20,7 @@ class Trello extends Component {
   fetchData() {
 
     // http://secouchermoinsbete.fr/feeds.atom
-    const API_URL = 'https://api.trello.com/1/lists/58f4a674c010ae6407db6699?fields=name&cards=open&card_fields=name&key=f9861f47c8dbc3ed7c87c98d57ab1d7a&token=a65c1642977da7a2d29a3ee3576dd257b26837f48aaece5ca4747211c4da9bc6';
+    const API_URL = 'https://api.trello.com/1/lists/'+TRELLO_LIST_ID+'?fields=name&cards=open&card_fields=name&key=f9861f47c8dbc3ed7c87c98d57ab1d7a&token='+TRELLO_LIST_KEY;
     fetch('https://cors.now.sh/'+ API_URL)
     .then((response) =>  response.json())
     .then((responseData) => {
